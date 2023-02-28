@@ -1,0 +1,49 @@
+.footer{
+    &__cont{
+        @media screen and (max-width: 1200px) {
+            &-right{
+                width: 44%;
+                margin-left: 30px;
+                &__form{
+                    &__email{
+                        &-input{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &-left{
+                width: 294px;
+            }
+        }
+        @media screen and (max-width: 991px) {
+            flex-direction: column;
+            &-right{
+                width: 100%;
+                margin: 40px 0;
+            }
+            &-left{
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+            &-left-text{
+                font-size: 29px;
+            }
+        }
+
+        @media screen and (max-width: 430px) {
+            &-right{
+                &__form{
+                    &__email{
+                        &-arrow{
+                            transform: translate(-3px, 56px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

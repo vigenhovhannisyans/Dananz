@@ -1,0 +1,25 @@
+<div class="header containers">
+<nav class="header__navbar navbar navbar-expand-lg">
+    <a class="header__navbar-logo navbar-brand" href="#">
+        <app-icon
+        [name]="'logo.svg'"
+        [width]="126"
+        [height]="54"
+        ></app-icon>
+    </a>
+    <button (click)="toggleNav()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div [class.show]="showNavbar" class="header__navbar-collapse collapse navbar-collapse" id="navbarNav">
+      <ul class="header__navbar-nav navbar-nav">
+        <li
+        class="header__navbar-nav-item nav-item"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}"
+        *ngFor="let router of routers">
+          <a class="header__navbar-nav-item_link nav-link" [routerLink]="router.path">{{router.value}}</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>

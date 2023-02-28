@@ -1,0 +1,49 @@
+@import '../../../../assets/colors/colors.scss';
+.header{
+    margin-top: 45px;
+    &__navbar-collapse{
+        flex-direction: row-reverse;
+    }
+    &__navbar-nav{
+        align-items: center;
+        &-item{
+            margin-right: 74px;
+            &_link{
+                font-size: 16px;
+                transition: all .5s;
+                color: $dark-title;
+                font-weight: 400;
+                &:hover{
+                    font-weight: 600;
+                }
+            }
+            &:last-child{
+                margin-right: 0;
+                width: 142px;
+                height: 49px;
+                text-align: center;
+                background: $dark-blue;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .5s;
+                cursor: pointer;
+                .nav-link{
+                    color: $white;
+                    font-weight: 500;
+                }
+                &:hover{
+                    background-color: $light-gray;
+                    .nav-link{
+                        color: $dark-blue;
+                    }
+                }
+            }
+            &.active{
+                .nav-link{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

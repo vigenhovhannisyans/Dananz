@@ -1,0 +1,59 @@
+<div class="footer">
+    <div class="footer__cont containers">
+        <div class="footer__cont-left">
+            <app-icon
+            [name]="'logo.svg'"
+            [width]="126"
+            [height]="54"
+            ></app-icon>
+            <h6 class="footer__cont-left-text">
+                One of the best furniture agency.
+            </h6>
+        </div>
+
+        <div class="footer__cont-right">
+            <form [formGroup]="emailForm" class="footer__cont-right__form">
+                <h6 class="footer__cont-right__form-title"><span class="circle"></span>Enter  your email to get the laterst news</h6>
+                <div class="footer__cont-right__form__email">
+                <input formControlName="email" type="email" placeholder="Email Address" class="footer__cont-right__form__email-input">
+                <span [class.active]="!emailForm.controls['email'].valid && emailForm.controls['email'].touched" class="error-message">Invalid email</span>    
+                <span [class.active]="emailForm.valid" class="footer__cont-right__form__email-arrow">
+                        <app-icon
+                        [width]="23"
+                        [height]="19"
+                        [name]="'arrow-right.svg'"
+                        ></app-icon>
+                    </span>
+            </div>
+            </form>
+            <div class="footer__cont-right__social">
+                <span class="footer__cont-right__social-title">Follow us On</span>
+                <div class="footer__cont-right__social__links">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__cont-right__social__links-link">
+                        <div class="icon">
+                            <app-icon [name]="'facebook.svg'" [width]="20" [height]="20"></app-icon>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__cont-right__social__links-link">
+                        <div class="icon">
+                            <app-icon [name]="'instagram.svg'" [width]="20" [height]="20"></app-icon>
+                        </div>
+                    </a>
+
+                    <a href="https://www.tiktok.com/" target="_blank" class="footer__cont-right__social__links-link">
+                        <div class="icon">
+                            <app-icon [name]="'tik-tok.svg'" [width]="20" [height]="20"></app-icon>
+                        </div>
+                    </a>
+
+                    <a href="https://www.youtube.com/" target="_blank" class="footer__cont-right__social__links-link">
+                        <div class="icon">
+                            <app-icon [name]="'youtube.svg'" [width]="20" [height]="20"></app-icon>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.header {
+    @media screen and (max-width:1200px) {
+        &__navbar-nav{
+            &-item{
+                margin-right: 33px;
+            }
+        }
+    }
+    @media screen and (max-width:991px) {
+        &__navbar-nav{
+            &-item{
+                margin: 0 0 5px;
+            }
+        }
+    }
+
+}

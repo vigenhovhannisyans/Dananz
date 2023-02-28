@@ -1,0 +1,118 @@
+@import '../../../../assets/colors/colors.scss';
+.footer{
+    &__cont{
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 80px;
+        &-left{
+            width: 420px;
+            &-text{
+                font-weight: 600;
+                font-size: 36px;
+                color: $dark-title;
+                margin-top: 12px;
+                margin-bottom: 0;
+                line-height: 61px;
+            }
+        }
+        &-right{
+            display: flex;
+            flex-direction: column;
+            &__form{
+                position: relative;
+                &-title{
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: $dark-title;
+                    .circle{
+                        display: inline-block;
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 50%;
+                        background-color: $dark-title;
+                        margin-right: 10px;
+                    }
+                }
+                &__email{
+                    display: flex;
+                    flex-direction: column;
+                    .error-message{
+                        display: inline-block;
+                        margin-top: 5px;
+                        font-size: 12px;
+                        color: $error;
+                        display: none;
+                        &.active{
+                            display: block;
+                        }
+                    }
+                    &-input{
+                        width: 440px;
+                        height: 40px;
+                        border: none;
+                        padding-right: 40px;
+                        border-bottom: 1px solid $border;
+                        outline: none;
+                        &::placeholder{
+                            color: $placeholder;
+                        }
+                    }
+                    &-arrow{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        transform: translate(-3px, 34px);
+                        pointer-events: none;
+                        &.active{
+                            pointer-events: all;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            &__social{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &-title{
+                    font-weight: 400;
+                    font-size: 16px;
+                    color: $dark-title;
+                    margin-bottom: 10px;
+                    margin-top: 40px;
+                }
+                &__links{
+                    display: flex;
+                    align-items: center;
+                    &-link{
+                        position: relative;
+                        display: inline-block;
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        background-color: $placeholder;
+                        margin-right: 32px;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                        .icon{
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 20px;
+                            height: 20px;
+                            ::ng-deep{
+                                .image{
+                                    vertical-align: baseline;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
